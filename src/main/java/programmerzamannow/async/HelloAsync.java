@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 @Component
 public class HelloAsync {
 
-  @Async
+  @Async("singleTaskExecutor")
   @SneakyThrows
   public Future<String> hello(final String name) {
     CompletableFuture<String> future = new CompletableFuture<>();

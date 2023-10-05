@@ -13,4 +13,9 @@ public class AsyncConfiguration {
   public Executor taskExecutor(){
     return Executors.newVirtualThreadPerTaskExecutor();
   }
+
+  @Bean
+  public Executor singleTaskExecutor(){
+    return Executors.newSingleThreadExecutor();
+  }
 }
